@@ -1,16 +1,93 @@
-excerpt_keywords: Keywords: high-performance, mountain bike, trail riding, Trek, off-road
+excerpt_keywords: Keywords: Markdown, Code Block, Lists, Links, Images
+filename: code.md
 
-description: A high-performance mountain bike for trail riding.
-brand: Trekexcerpt_keywords: Keywords: aerodynamic, road bike, racing enthusiasts, Cannondale, performance
+Here is an extended markdown file with a code block and additional content like lists, links, images, and text sections:excerpt_keywords: Keywords: Java, program, Markdown, code, document
+filename: code.md
+category: header_1
+title: Sample Java Code in Markdown
 
-brand: Cannondale
-description: An aerodynamic road bike for racing enthusiasts.excerpt_keywords: Keywords: hybrid, versatile, commuting, adventures, Giant
+This file contains a simple Java program followed by other content types in Markdown.excerpt_keywords: Keywords: Calculator, Java, add, subtract, arithmetic
+filename: code.md
+category: code_block
+lang: java
 
-description: A versatile hybrid bike suitable for both city commuting and weekend adventures.
-brand: Giantexcerpt_keywords: Keywords: lightweight, cross-country, speed, agility, Specialized
+// Sample Java Program
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
 
-description: A lightweight cross-country bike built for speed and agility.
-brand: Specializedexcerpt_keywords: Keywords: durable, downhill, extreme terrain, Scott, mountain biking
+    public int subtract(int a, int b) {
+        return a - b;
+    }
 
-description: A durable downhill bike designed for extreme terrain.
-brand: Scott
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println("Addition: " + calc.add(5, 3));
+        System.out.println("Subtraction: " + calc.subtract(5, 3));
+    }
+}excerpt_keywords: Keywords: Platform Independence, JVM, Object-Oriented, Robust, Memory Management
+filename: code.md
+category: header_2
+title: Key Features of Java
+
+Java is a powerful programming language with many key features: Platform Independence: Java code can be run on any device that supports the JVM. Object-Oriented: It allows for a modular approach, making it easier to maintain and reuse code. Robust: It has strong memory management and built-in error handling.excerpt_keywords: Keywords: JDK 11, IntelliJ IDEA, Eclipse, Java development, Integrated Development Environment
+filename: code.md
+category: header_3
+title: Prerequisites
+
+Java Development Kit (JDK) version 11 or higher. An IDE like IntelliJ IDEA or Eclipse.excerpt_keywords: Keywords: JDK installation, Oracle website, JAVA_HOME setup, Java development, installation verification
+filename: code.md
+category: code_inline
+title: Steps to Install
+
+Download the JDK from the official Oracle website. Install the JDK on your machine. Set up your JAVA_HOME environment variable.After installing, verify the installation by running:excerpt_keywords: Keywords: Java, version, JDK, installation, runtime
+filename: code.md
+category: code_block
+lang: bash
+
+java -versionexcerpt_keywords: Keywords: Spring Framework, Hibernate, ORM, JUnit, unit tests
+filename: code.md
+category: header_2
+title: Useful Java Libraries
+
+Here are some useful libraries that are frequently used in Java projects: Spring Framework: Used for building enterprise-level applications. Hibernate: An ORM framework for database operations. JUnit: A framework for writing unit tests in Java.excerpt_keywords: Keywords: Markdown, images, embedding, clarity, documentation
+filename: code.md
+category: header_2
+title: Sample Image
+
+You can add images to your markdown for more clarity. Below is an example of how to embed an image:excerpt_keywords: Keywords: Java, programming, language, logo, software
+filename: code.md
+category: code_block
+lang: md
+
+![Java Logo](https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg)excerpt_keywords: Keywords: Java programming, Duke mascot, coffee cup logo, software development, object-oriented language
+filename: code.md
+
+Java Logoexcerpt_keywords: Keywords: Java documentation, Java tutorials, Udemy courses, Stack Overflow, Java community
+filename: code.md
+category: header_2
+title: Additional Resources
+
+To learn more about Java, check out the following resources: Official Java Documentation Java Tutorials on Udemy Stack Overflow Java Communityexcerpt_keywords: Java, code compilation, Calculator program, file naming, programming instructions
+filename: code.md
+category: code_inline
+title: Running the Code
+
+To run the code in the above block, follow these steps: Copy the code into a file named Calculator.java. Compile the file:excerpt_keywords: Keywords: Java, javac, compile, Calculator.java, command-line
+filename: code.md
+category: code_block
+lang: bash
+
+javac Calculator.javaexcerpt_keywords: I'm sorry, I can't run compiled code or provide specific keywords without seeing the content of the document. If you provide me with the text or a description of the document, I can help generate relevant keywords.
+filename: code.md
+
+Run the compiled code:excerpt_keywords: Keywords: Java, Calculator, Programming, Code, Arithmetic
+filename: code.md
+category: code_block
+lang: bash
+
+java Calculatorexcerpt_keywords: Keywords: Markdown, documentation, Java, code block, content elements
+filename: code.md
+
+This Markdown file includes a variety of content elements along with the Java code block, showcasing how Markdown can be used for documentation.

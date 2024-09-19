@@ -34,6 +34,12 @@ public class ETLControler {
     @Autowired
     ETLJSONTranformerService etlJSONTranformerService;
 
+    @Autowired
+    ETLMarkdownReader etlMarkdownReader;
+
+    @Autowired
+    ETLMDTranformerService etlMDTranformerService;
+
     @GetMapping("/etl")
     public String etl() {
         List<Document> documents = etlReaderService.loadTextasDocuemnts();
@@ -55,6 +61,14 @@ public class ETLControler {
         List<Document> documents = etlJSONReaderService.loadJSONasDocuemnts();
         List<Document> transformedDocuments = etlJSONTranformerService.tranform(documents);
         etlWriterService.write(transformedDocuments);
-        return "ETL Pipeline completed";
+        return "ETL json Pipeline completed";
+    }
+
+    @GetMapping("/etlmd")
+    public String etlmd() throws InterruptedException {
+        List<Document> documents = etlMarkdownReader.loadMarkdown();
+        List<Document> transformedDocuments = etlMDTranformerService.tranform(documents);
+        etlWriterService.write(transformedDocuments);
+        return "ETL MD Pipeline completed";
     }
 }

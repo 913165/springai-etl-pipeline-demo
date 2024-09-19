@@ -1,0 +1,5 @@
+charset: UTF-8
+source: input.txt
+
+Apple is looking to buy a UK-based startup for $1 billion. The company, founded by Steve jobs and Steve Wozniak,
+is known for its innovation in the technology sector. The deal is expected to be finalized by next month.

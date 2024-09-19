@@ -1,4 +1,5 @@
 charset: UTF-8
+excerpt_keywords: Keywords: Apple acquisition, UK-based startup, $1 billion deal, Steve Jobs, technology innovation
 source: input.txt
 
 Apple is looking to buy a UK-based startup for $1 billion. The company, founded by Steve jobs and Steve Wozniak,

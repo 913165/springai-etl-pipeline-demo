@@ -3,6 +3,8 @@ package com.example.spirngaietlpipeline.controller;
 import com.example.spirngaietlpipeline.service.ETLReaderService;
 import com.example.spirngaietlpipeline.service.ETLTranformerService;
 import com.example.spirngaietlpipeline.service.ETLWriterService;
+import com.example.spirngaietlpipeline.service.pdf.ETLPDFReaderService;
+import com.example.spirngaietlpipeline.service.pdf.ETLPDFTranformerService;
 import org.springframework.ai.document.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,12 +22,26 @@ public class ETLControler {
     ETLTranformerService etlTranformerService;
 
     @Autowired
+    ETLPDFReaderService etlPDFReaderService;
+
+    @Autowired
+    ETLPDFTranformerService etlPDFTranformerService;
+
+    @Autowired
     ETLWriterService etlWriterService;
 
     @GetMapping("/etl")
     public String etl() {
         List<Document> documents = etlReaderService.loadTextasDocuemnts();
         List<Document> transformedDocuments = etlTranformerService.tranform(documents);
+        etlWriterService.write(transformedDocuments);
+        return "ETL Pipeline completed";
+    }
+
+    @GetMapping("/etlpdf")
+    public String etlpdf() {
+        List<Document> documents = etlPDFReaderService.loadTextasDocuemnts();
+        List<Document> transformedDocuments = etlPDFTranformerService.tranform(documents);
         etlWriterService.write(transformedDocuments);
         return "ETL Pipeline completed";
     }

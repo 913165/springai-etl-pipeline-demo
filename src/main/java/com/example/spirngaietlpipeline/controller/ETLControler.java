@@ -1,8 +1,6 @@
 package com.example.spirngaietlpipeline.controller;
 
-import com.example.spirngaietlpipeline.service.ETLReaderService;
-import com.example.spirngaietlpipeline.service.ETLTranformerService;
-import com.example.spirngaietlpipeline.service.ETLWriterService;
+import com.example.spirngaietlpipeline.service.*;
 import com.example.spirngaietlpipeline.service.pdf.ETLPDFReaderService;
 import com.example.spirngaietlpipeline.service.pdf.ETLPDFTranformerService;
 import org.springframework.ai.document.Document;
@@ -28,7 +26,13 @@ public class ETLControler {
     ETLPDFTranformerService etlPDFTranformerService;
 
     @Autowired
+    ETLJSONReaderService etlJSONReaderService;
+
+    @Autowired
     ETLWriterService etlWriterService;
+
+    @Autowired
+    ETLJSONTranformerService etlJSONTranformerService;
 
     @GetMapping("/etl")
     public String etl() {
@@ -42,6 +46,14 @@ public class ETLControler {
     public String etlpdf() {
         List<Document> documents = etlPDFReaderService.loadTextasDocuemnts();
         List<Document> transformedDocuments = etlPDFTranformerService.tranform(documents);
+        etlWriterService.write(transformedDocuments);
+        return "ETL Pipeline completed";
+    }
+
+    @GetMapping("/etljson")
+    public String etlJson() throws InterruptedException {
+        List<Document> documents = etlJSONReaderService.loadJSONasDocuemnts();
+        List<Document> transformedDocuments = etlJSONTranformerService.tranform(documents);
         etlWriterService.write(transformedDocuments);
         return "ETL Pipeline completed";
     }
